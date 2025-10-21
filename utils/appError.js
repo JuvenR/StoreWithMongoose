@@ -20,7 +20,7 @@ class AppError extends Error {
 }
 
 //Funcion middleware para manejar errores
-const globlaErrorHandler = (err, req, res, next) => {
+const globalErrorHandler = (err, req, res, next) => {
     err.statusCode = err.statusCode || 500;
     err.status = err.status || 'error';
     logger.error(err.message);
@@ -33,4 +33,4 @@ const globlaErrorHandler = (err, req, res, next) => {
     });
 }
 
-export { AppError, globlaErrorHandler}
+export { AppError, globalErrorHandler}
